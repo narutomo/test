@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 文字を入れたら即座に反映される処理
         textField.rx.text.orEmpty
             .map {$0.description}
             .bind(to: label.rx.text)
